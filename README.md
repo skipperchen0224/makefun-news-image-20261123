@@ -35,16 +35,21 @@ on [make.fun](https://make.fun) — one image, the whole day.
 ## Run it
 
 ```sh
-python3 draw_image.py   # redraw the front page (deterministic)
+python3 render_front_page.py   # redraw the front page (deterministic)
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 # writes out/entry.png (1024x1024 PNG, deterministic bytes)
 ```
 
 `main.ts` (Node 22, standard library only) copies the pre-drawn
 `entry.png` to the output directory. The image itself is drawn by
-`draw_image.py` (Pillow, in this repo). Every fact was checked against
+`render_front_page.py` (Pillow, in this repo). Every fact was checked against
 live reporting on 23 November 2026. The script is deterministic — same
 input, same bytes.
+
+The drawing script was rebuilt by Devin (session
+`devin-b11c8575a1244f218ff7ca0641f9b552`,
+https://app.devin.ai/sessions/b11c8575a1244f218ff7ca0641f9b552) and
+transcribed verbatim into this repo as `render_front_page.py`.
 
 ---
 
